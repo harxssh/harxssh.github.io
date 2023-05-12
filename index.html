@@ -9,9 +9,13 @@
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
+    <script src="https://cdn.anychart.com/releases/8.11.1/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.11.1/js/anychart-tag-cloud.min.js"></script>
+
     <!-- custom css file link  -->
     <link rel="stylesheet" href="./assets/css/style.css">
 
+    
 </head>
 
 <body>
@@ -31,7 +35,6 @@
                 <li><a href="#home">Introduction</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -125,55 +128,8 @@
         <div class="row">
 
             <div class="counter">
-
-                <div class="box">
-                    <span>HTML</span>
-                    <h3>Advanced</h3>
-                </div>
-
-                <div class="box">
-                    <span>CSS</span>
-                    <h3>Advanced</h3>
-                </div>
-
-                <div class="box">
-                    <span>Boostrap</span>
-                    <h3>Advanced</h3>
-                </div>
-
-                <div class="box">
-                    <span>jQuery</span>
-                    <h3>Intermediate</h3>
-                </div>
-
-                <div class="box">
-                    <span>JavaScript</span>
-                    <h3>Intermediate</h3>
-                </div>
-
-                <div class="box">
-                    <span>WordPress</span>
-                    <h3>Intermediate</h3>
-                </div>
-
-                <div class="box">
-                    <span>PHP</span>
-                    <h3>Intermediate</h3>
-                </div>
-
-                <div class="box">
-                    <span>MySQL</span>
-                    <h3>Intermediate</h3>
-                </div>
-
-                <div class="box">
-                    <span>Python</span>
-                    <h3>Intermediate</h3>
-                </div>
-
-                <div class="box">
-                    <span>React.js</span>
-                    <h3>Beginner</h3>
+                
+                <div  id="word" class="box">
                 </div>
 
             </div>
@@ -183,41 +139,6 @@
     </section>
 
     <!-- skills section ends -->
-
-    <!-- education section starts  -->
-
-    <section class="education" id="education">
-
-        <h1 class="heading"> my <span>education</span> </h1>
-
-        <div class="box-container">
-
-            <div class="box">
-                <i class="fas fa-graduation-cap"></i>
-                <span>2015 - 2016</span>
-                <h3>10th Class</h3>
-                <p>I have completed my 10th class from Ram-eesh International School by securing 76.4%.</p>
-            </div>
-
-            <div class="box">
-                <i class="fas fa-graduation-cap"></i>
-                <span>2017 - 2018</span>
-                <h3>12th Class</h3>
-                <p>I have completed my 12th class from Ram-eesh International School by securing 86.8%.</p>
-            </div>
-
-            <div class="box">
-                <i class="fas fa-graduation-cap"></i>
-                <span>2018 - 2022</span>
-                <h3>B.tech CSE</h3>
-                <p> I completed my Bachelor's Of Technology in Computer Science Engineering from JECRC university, Jaipur in the year 2022 with GPA of 8.6%.</p>
-            </div>
-        </div>
-
-
-    </section>
-
-    <!-- education section ends -->
 
     <!-- portfolio section starts  -->
 
@@ -284,8 +205,8 @@
                     <h3><i class="fas fa-envelope"></i><a href="mailto:harshbhatnagar237@gmail.com" target="_blank" rel="noopener noreferrer">harshbhatnagar237@gmail.com</a></h3>
                     <h3><i class="fab fa-github"></i><a href="https://github.com/harxssh" target="_blank">github.com/harxssh</a></h3>
                     <h3><i class="fab fa-twitter"></i><a href="https://twitter.com/harxssh" target="_blank">twitter.com/harxssh</a></h3>
-                    <h3><i class="fas fa-phone"></i><a href="tel:+91 9911-670-331">+91 9911-670-331</a></h3>
-                    <h3><i class="fas fa-map-marker-alt"></i>Jaipur, Rajasthan - 302020</h3>
+                    <!-- <h3><i class="fas fa-phone"></i><a href="tel:+91 9911-670-331">+91 9911-670-331</a></h3> -->
+                    <!-- <h3><i class="fas fa-map-marker-alt"></i>Jaipur, Rajasthan - 302020</h3> -->
                 </div>
 
             </div>
@@ -322,5 +243,31 @@
 
 
 </body>
-
 </html>
+
+<script>
+	anychart.onDocumentReady(function(){
+		var data=[{"x": "HTML", "value": 1090000000},
+    {"x": "CSS", "value": 983000000},
+    {"x": "Bootstrap", "value": 544000000},
+    {"x": "jQuery", "value": 527000000},
+    {"x": "JavaScript", "value": 422000000},
+    {"x": "WordPress", "value": 281000000},
+    {"x": "PHP", "value": 267000000},
+    {"x": "MySQL", "value": 261000000},
+    {"x": "Python", "value": 229000000},
+    {"x": "React.js", "value": 229000000}];
+    
+  var chart=anychart.tagCloud(data);
+  var customcolor=anychart.scales.linearColor();
+  customcolor.colors(["#45b6fe",'#f94449', "#DE73FF"]);
+   chart.colorScale(customcolor);
+  chart.angles([0,45,-45]);
+  chart.colorRange(true);
+  chart.colorRange().length('90%');
+  chart.container('word');
+  chart.draw();
+	});
+	
+
+</script>

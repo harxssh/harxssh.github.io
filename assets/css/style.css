@@ -243,105 +243,29 @@ header .navbar ul li a:hover{
 }
 
 .skills .row{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: block;
     padding:1rem 0;
 }
 
-.skills .row .info{
-    flex:1 1 48rem;
-    padding:2rem 1rem;
-    padding-left: 6rem;
-}
 
-.skills .row .info h3{
-    font-size: 2rem;
-    color:var(--blue);
-    padding:1rem 0;
-    font-weight: normal;
-}
-
-.skills .row .info h3 span{
-    color:#eee;
-    padding:0 .5rem;
-}
 
 .skills .row .counter{
-    flex: 1 1 48rem;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: block;
+    height: 60vh;
 }
 
 .skills .row .counter .box{
-    width: 50rem;
     background:#222;
     text-align: center;
     padding: 2rem 1rem;
     margin:1rem 1rem;
 }
 
-.skills .row .counter .box span{
-    font-size: 4rem;
-    color:var(--blue);
-
-}
-
-.skills .row .counter .box h3{
-    font-size: 2rem;
-    color:#fff;
-}
-
-.education .box-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding:1rem 0;
-    padding-left: 3rem;
-}
-
-.education .box-container .box{
-    width:40rem;
-    margin:4rem 1rem;
-    padding-left: 4rem;
-    border-left: .2rem solid #fff;
-    position: relative;
-}
-
-.education .box-container .box span{
-    font-size: 1.3rem;
-    background:#222;
-    color:#fff;
-    border-radius: 5rem;
-    padding:.5rem 2.5rem;
-}
-
-.education .box-container .box h3{
-    font-size: 2rem;
-    color:#fff;
-    padding-top: 1.5rem;
-}
-
-.education .box-container .box p{
-    font-size: 1.4rem;
-    color:#eee;
-    padding: 1rem 0;
-}
-
-.education .box-container .box i{
-    position: absolute;
-    top:-1.5rem; left:-2.5rem;
-    height:5rem;
-    width: 5rem;
-    border-radius: 50%;
-    line-height: 5rem;
-    text-align: center;
-    font-size: 2rem;
-    color:#fff;
-    background:var(--blue);
+#word{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .projects .box-container{
